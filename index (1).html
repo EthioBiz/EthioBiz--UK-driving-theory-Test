@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EthioBiz UK Driving Theory Test | Amharic & Tigrinya</title>
+<meta name="description" content="Prepare for your UK driving theory test in Amharic or Tigrinya. 730 practice questions, mock tests, progress tracking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --red:#DC2626;--red-dark:#B91C1C;--red-light:#FEE2E2;
+  --navy:#0F172A;--navy2:#1E293B;--navy3:#334155;
+  --gold:#F59E0B;--gold-light:#FEF3C7;
+  --green:#16A34A;--green-light:#DCFCE7;
+  --blue:#2563EB;--blue-light:#DBEAFE;
+  --gray50:#F8FAFC;--gray100:#F1F5F9;--gray200:#E2E8F0;
+  --gray500:#64748B;--gray700:#334155;
+  --shadow:0 4px 6px -1px rgba(0,0,0,.1);
+  --shadow-lg:0 10px 15px -3px rgba(0,0,0,.1);
+  --shadow-xl:0 20px 25px -5px rgba(0,0,0,.15);
+  --radius:12px;--radius-sm:8px;--radius-lg:16px;--radius-xl:24px;
+  --font:'Inter',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--navy);background:#fff;line-height:1.6;overflow-x:hidden}
+.hidden{display:none!important}
+.container{max-width:1120px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 24px;border-radius:var(--radius-sm);font-family:var(--font);font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none;white-space:nowrap}
+.btn-lg{padding:16px 32px;font-size:16px;border-radius:var(--radius)}
+.btn-sm{padding:8px 16px;font-size:13px;border-radius:6px}
+.btn-primary{background:var(--red);color:#fff}.btn-primary:hover{background:var(--red-dark);transform:translateY(-1px);box-shadow:0 8px 20px rgba(220,38,38,.3)}
+.btn-secondary{background:#fff;color:var(--navy);border:2px solid var(--gray200)}.btn-secondary:hover{border-color:var(--red);color:var(--red)}
+.btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4)}.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-navy{background:var(--navy);color:#fff}.btn-navy:hover{background:var(--navy2)}
+.btn-block{width:100%}
+/* NAV */
+#topNav{background:var(--navy);position:fixed;top:0;left:0;right:0;z-index:500;border-bottom:1px solid var(--navy3)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:18px;cursor:pointer}
+.brand-ethio{color:var(--gold)}.brand-biz{color:#fff}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-lang-badge{background:var(--navy3);color:#fff;padding:4px 11px;border-radius:20px;font-size:12px;font-weight:600}
+.nav-user{display:flex;align-items:center;gap:8px;cursor:pointer}
+.nav-avatar{width:33px;height:33px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:13px}
+.nav-username{color:#fff;font-size:13px;font-weight:500}
+.screen{padding-top:64px;min-height:100vh}
+/* LANDING */
+#screenLanding{padding-top:0}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#1e1b4b 60%,var(--navy2) 100%);color:#fff;padding:120px 0 72px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-40%;right:-5%;width:560px;height:560px;background:radial-gradient(circle,rgba(220,38,38,.1) 0%,transparent 70%);border-radius:50%}
+.hero-content{position:relative;z-index:1;max-width:660px}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:18px;flex-wrap:wrap}
+.badge{display:inline-flex;align-items:center;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700}
+.badge-gold{background:var(--gold-light);color:#92400E}
+.badge-green{background:var(--green-light);color:var(--green)}
+.hero h1{font-size:clamp(30px,4.5vw,50px);font-weight:800;line-height:1.15;margin-bottom:16px;letter-spacing:-1px}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero-sub{font-size:17px;color:rgba(255,255,255,.72);margin-bottom:30px;line-height:1.7;max-width:520px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+.hero-trust{display:flex;gap:18px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:6px;font-size:12px;color:rgba(255,255,255,.5)}
+.trust-item strong{color:rgba(255,255,255,.8)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px;padding-top:36px;border-top:1px solid rgba(255,255,255,.1)}
+.hero-stat .num{font-size:32px;font-weight:800;color:var(--gold)}
+.hero-stat .lbl{font-size:11px;color:rgba(255,255,255,.45);margin-top:2px}
+.section{padding:68px 0}
+.section-alt{background:var(--gray50)}
+.section-head{text-align:center;margin-bottom:44px}
+.section-head .eyebrow{color:var(--red);font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:10px}
+.section-head h2{font-size:clamp(24px,3vw,36px);font-weight:800;letter-spacing:-.5px;margin-bottom:12px}
+.section-head p{font-size:15px;color:var(--gray500);max-width:500px;margin:0 auto}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+.feature-card{background:#fff;border:1px solid var(--gray200);border-radius:var(--radius-lg);padding:26px;transition:all .3s}
+.feature-card:hover{border-color:var(--red);box-shadow:var(--shadow-lg);transform:translateY(-3px)}
+.feature-icon{width:46px;height:46px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:14px}
+.fi-red{background:var(--red-light)}.fi-gold{background:var(--gold-light)}.fi-green{background:var(--green-light)}.fi-blue{background:var(--blue-light)}
+.feature-card h3{font-size:15px;font-weight:700;margin-bottom:7px}
+.feature-card p{font-size:13px;color:var(--gray500);line-height:1.6}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:24px}
+.step{text-align:center;padding:24px 18px}
+.step-num{width:46px;height:46px;background:var(--red);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;margin:0 auto 14px}
+.step h3{font-size:15px;font-weight:700;margin-bottom:7px}
+.step p{font-size:12px;color:var(--gray500);line-height:1.6}
+.pricing-card{background:#fff;border:2px solid var(--navy);border-radius:var(--radius-xl);padding:40px;max-width:440px;margin:0 auto;position:relative;box-shadow:var(--shadow-xl)}
+.pricing-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);padding:4px 16px;border-radius:20px;font-size:12px;font-weight:800;white-space:nowrap}
+.pricing-card h3{font-size:19px;font-weight:800;text-align:center;margin-bottom:5px}
+.pricing-sub{text-align:center;color:var(--gray500);font-size:13px;margin-bottom:18px}
+.price-display{text-align:center;margin:18px 0}
+.price-display .amount{font-size:50px;font-weight:800;letter-spacing:-2px}
+.price-display .currency{font-size:24px;font-weight:700;vertical-align:top;margin-top:7px;display:inline-block}
+.price-display .period{font-size:12px;color:var(--gray500);margin-top:5px}
+.price-features{list-style:none;margin:18px 0 24px}
+.price-features li{padding:8px 0;border-bottom:1px solid var(--gray100);font-size:13px;display:flex;align-items:center;gap:9px;color:var(--gray700)}
+.price-features li:last-child{border-bottom:none}
+.price-features li::before{content:'✓';color:var(--green);font-weight:800;font-size:14px;flex-shrink:0}
+.guarantee{display:flex;align-items:center;gap:7px;background:var(--green-light);padding:9px 13px;border-radius:var(--radius-sm);margin-top:12px;font-size:12px;color:var(--green);font-weight:600}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.review-card{background:#fff;border:1px solid var(--gray200);border-radius:var(--radius-lg);padding:22px}
+.stars{color:var(--gold);font-size:15px;margin-bottom:8px}
+.review-text{font-size:13px;color:var(--gray700);line-height:1.65;margin-bottom:12px;font-style:italic}
+.reviewer{display:flex;align-items:center;gap:9px}
+.reviewer-avatar{width:36px;height:36px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px}
+.reviewer-name{font-weight:600;font-size:13px}
+.reviewer-loc{font-size:11px;color:var(--gray500)}
+footer{background:var(--navy);color:rgba(255,255,255,.4);padding:36px 0;text-align:center;font-size:13px}
+footer strong{color:#fff}
+footer a{color:rgba(255,255,255,.4);text-decoration:none}
+footer a:hover{color:#fff}
+/* MODALS */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:600;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+.modal-box{background:#fff;border-radius:var(--radius-xl);padding:40px;width:100%;max-width:440px;box-shadow:var(--shadow-xl)}
+.modal-box h2{font-size:22px;font-weight:800;text-align:center;margin-bottom:5px}
+.modal-subtitle{text-align:center;color:var(--gray500);margin-bottom:24px;font-size:13px}
+.auth-tabs{display:flex;border-bottom:2px solid var(--gray200);margin-bottom:22px}
+.auth-tab{flex:1;padding:9px;text-align:center;font-size:13px;font-weight:600;cursor:pointer;color:var(--gray500);border:none;background:none;font-family:var(--font);border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .2s}
+.auth-tab.active{color:var(--red);border-bottom-color:var(--red)}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;font-size:12px;font-weight:600;color:var(--gray700);margin-bottom:5px}
+.form-input{width:100%;padding:10px 13px;border:1.5px solid var(--gray200);border-radius:var(--radius-sm);font-family:var(--font);font-size:14px;transition:border .2s;outline:none}
+.form-input:focus{border-color:var(--red)}
+.form-error{color:var(--red);font-size:12px;margin-top:5px;background:var(--red-light);padding:8px 12px;border-radius:6px;display:none}
+.form-error.show{display:block}
+.form-hint{font-size:11px;color:var(--gray500);margin-top:4px}
+.lang-options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lang-option-btn{padding:20px 12px;border:2px solid var(--gray200);border-radius:var(--radius-lg);cursor:pointer;background:#fff;transition:all .2s;text-align:center;font-family:var(--font)}
+.lang-option-btn:hover,.lang-option-btn.selected{border-color:var(--red);background:var(--red-light)}
+.lang-flag{font-size:30px;margin-bottom:5px;display:block}
+.lang-name{font-size:14px;font-weight:700;display:block}
+.lang-native{font-size:12px;color:var(--gray500);margin-top:2px;display:block}
+.lang-note{text-align:center;font-size:12px;color:var(--red);background:var(--red-light);padding:9px 13px;border-radius:var(--radius-sm);margin-top:12px;font-weight:600}
+.pay-box{background:#fff;border-radius:var(--radius-xl);padding:40px;width:100%;max-width:390px;box-shadow:var(--shadow-xl);text-align:center}
+.pay-box h2{font-size:21px;font-weight:800;margin-bottom:5px}
+.pay-sub{color:var(--gray500);font-size:13px;margin-bottom:16px}
+.pay-price{font-size:46px;font-weight:800;color:var(--red);letter-spacing:-2px;margin:12px 0}
+.pay-price span{font-size:20px;vertical-align:super;margin-right:2px}
+.pay-features{text-align:left;margin:14px 0;background:var(--gray50);border-radius:var(--radius-sm);padding:12px 16px}
+.pay-features li{list-style:none;padding:4px 0;font-size:12px;color:var(--gray700);display:flex;align-items:center;gap:7px}
+.pay-features li::before{content:'✓';color:var(--green);font-weight:800}
+.paypal-btn{background:#0070BA;color:#fff;border:none;padding:14px;border-radius:var(--radius-sm);font-size:15px;font-weight:700;cursor:pointer;width:100%;font-family:var(--font);display:flex;align-items:center;justify-content:center;gap:7px;margin-top:12px;transition:background .2s}
+.paypal-btn:hover{background:#005ea6}
+.pay-secure{font-size:11px;color:var(--gray500);margin-top:8px}
+.modal-cancel{background:none;border:none;color:var(--gray500);font-size:12px;cursor:pointer;margin-top:8px;padding:5px;font-family:var(--font)}
+/* DASHBOARD */
+#screenDashboard{background:var(--gray50)}
+.dash-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);padding:36px 0 52px;color:#fff}
+.dash-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;gap:12px;flex-wrap:wrap}
+.dash-welcome{font-size:24px;font-weight:800}
+.dash-lang-badge{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:5px 13px;border-radius:20px;font-size:12px;font-weight:600;color:#fff}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stat-box{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:16px;text-align:center}
+.stat-box .sv{font-size:26px;font-weight:800;color:var(--gold)}
+.stat-box .sl{font-size:11px;color:rgba(255,255,255,.45);margin-top:2px}
+.dash-body{margin-top:-24px;padding-bottom:48px}
+.dash-card{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow);overflow:hidden;margin-bottom:18px}
+.dash-card-head{padding:16px 20px;border-bottom:1px solid var(--gray100);display:flex;align-items:center;justify-content:space-between}
+.dash-card-head h3{font-size:14px;font-weight:700}
+.dash-card-head p{font-size:11px;color:var(--gray500)}
+.mode-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.mode-item{padding:20px;cursor:pointer;transition:background .2s;display:flex;align-items:center;gap:12px;border-right:1px solid var(--gray100)}
+.mode-item:last-child{border-right:none}
+.mode-item:hover{background:var(--gray50)}
+.mode-icon{width:42px;height:42px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+.mode-text h4{font-size:13px;font-weight:700;margin-bottom:2px}
+.mode-text p{font-size:11px;color:var(--gray500)}
+.prog-section{padding:12px 20px}
+.prog-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--gray100);cursor:pointer}
+.prog-row:last-child{border-bottom:none}
+.prog-row:hover .prog-label{color:var(--red)}
+.prog-label{font-size:12px;color:var(--gray700);width:185px;flex-shrink:0;font-weight:500}
+.prog-bar-wrap{flex:1;background:var(--gray100);border-radius:20px;height:6px;overflow:hidden}
+.prog-bar-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--red),var(--gold));transition:width .6s}
+.prog-pct{font-size:11px;color:var(--gray500);width:34px;text-align:right;flex-shrink:0}
+/* PRACTICE */
+#screenPractice{background:var(--gray50)}
+.ptopbar{background:#fff;border-bottom:1px solid var(--gray200);padding:12px 0;position:sticky;top:64px;z-index:100}
+.ptb-inner{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.ptb-info{font-size:13px;color:var(--gray500)}
+.ptb-info strong{color:var(--navy)}
+.ptb-prog{flex:1;min-width:140px;background:var(--gray200);height:5px;border-radius:20px;overflow:hidden}
+.ptb-fill{height:100%;background:linear-gradient(90deg,var(--red),var(--gold));transition:width .4s}
+.ptb-score{font-size:12px;font-weight:700;color:var(--green);white-space:nowrap}
+.sec-filter{background:#fff;border-bottom:1px solid var(--gray100);padding:9px 0;overflow-x:auto}
+.sec-pills{display:flex;gap:6px;padding:0 20px;min-width:max-content}
+.sec-pill{padding:5px 12px;border:1.5px solid var(--gray200);border-radius:20px;font-size:11px;font-weight:600;cursor:pointer;background:#fff;color:var(--gray700);transition:all .2s;font-family:var(--font);white-space:nowrap}
+.sec-pill:hover{border-color:var(--red);color:var(--red)}
+.sec-pill.active{background:var(--red);border-color:var(--red);color:#fff}
+.q-area{max-width:720px;margin:24px auto;padding:0 18px}
+.q-card{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow);overflow:hidden}
+.q-meta{padding:12px 20px;background:var(--gray50);border-bottom:1px solid var(--gray100);display:flex;align-items:center;justify-content:space-between}
+.q-num{font-size:11px;font-weight:600;color:var(--gray500)}
+.q-sec-tag{font-size:11px;color:var(--red);font-weight:700;background:var(--red-light);padding:2px 8px;border-radius:20px}
+.q-body{padding:26px}
+.q-text{font-size:17px;font-weight:600;line-height:1.6;margin-bottom:22px}
+.opts-list{display:grid;gap:9px}
+.opt{display:flex;align-items:flex-start;gap:11px;padding:13px 15px;border:2px solid var(--gray200);border-radius:var(--radius);cursor:pointer;transition:all .2s;background:#fff;width:100%;text-align:left;font-family:var(--font)}
+.opt:hover:not(.disabled){border-color:var(--navy3);background:var(--gray50)}
+.opt.selected{border-color:var(--navy);background:var(--gray50)}
+.opt.correct{border-color:var(--green)!important;background:var(--green-light)!important}
+.opt.wrong{border-color:var(--red)!important;background:var(--red-light)!important}
+.opt.disabled{cursor:default}
+.opt-letter{width:29px;height:29px;border-radius:6px;background:var(--gray100);color:var(--gray700);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;flex-shrink:0;transition:all .2s}
+.opt.selected .opt-letter{background:var(--navy);color:#fff}
+.opt.correct .opt-letter{background:var(--green);color:#fff}
+.opt.wrong .opt-letter{background:var(--red);color:#fff}
+.opt-text{font-size:14px;color:var(--gray700);line-height:1.5;padding-top:3px}
+.q-feedback{margin:14px 0 0;padding:12px 15px;border-radius:var(--radius-sm);display:none;align-items:center;gap:9px}
+.q-feedback.show{display:flex}
+.fb-correct{background:var(--green-light);color:var(--green)}
+.fb-wrong{background:var(--red-light);color:var(--red)}
+.fb-icon{font-size:19px}.fb-msg{font-size:13px;font-weight:600}
+.q-actions{padding:18px 20px;border-top:1px solid var(--gray100);display:flex;justify-content:flex-end;gap:9px}
+.results-wrap{max-width:500px;margin:44px auto;padding:0 18px}
+.results-card{background:#fff;border-radius:var(--radius-xl);box-shadow:var(--shadow-xl);padding:44px 32px;text-align:center}
+.results-circle{width:124px;height:124px;border-radius:50%;margin:0 auto 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:5px solid}
+.rc-pass{border-color:var(--green);color:var(--green);background:var(--green-light)}
+.rc-fail{border-color:var(--red);color:var(--red);background:var(--red-light)}
+.rc-pct{font-size:30px;font-weight:800;line-height:1}
+.rc-label{font-size:11px;font-weight:700;margin-top:2px}
+.results-card h2{font-size:22px;font-weight:800;margin-bottom:8px}
+.results-card p{color:var(--gray500);margin-bottom:24px;font-size:14px}
+.results-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px}
+.rs-box{background:var(--gray50);border-radius:var(--radius-sm);padding:12px}
+.rs-box .rv{font-size:20px;font-weight:800}
+.rs-box .rl{font-size:11px;color:var(--gray500);margin-top:2px}
+.results-btns{display:flex;gap:9px;justify-content:center;flex-wrap:wrap}
+/* BOOK */
+#screenBook{background:var(--gray50)}
+.book-topbar{background:#fff;border-bottom:1px solid var(--gray200);padding:12px 0;position:sticky;top:64px;z-index:100}
+.btb-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.btb-title{font-weight:700;font-size:14px}
+.book-layout{display:grid;grid-template-columns:230px 1fr;min-height:calc(100vh - 126px)}
+.book-toc{background:#fff;border-right:1px solid var(--gray200);padding:18px 0;position:sticky;top:126px;height:calc(100vh - 126px);overflow-y:auto}
+.toc-head{padding:0 16px 10px;font-size:10px;font-weight:700;color:var(--gray500);text-transform:uppercase;letter-spacing:.8px;border-bottom:1px solid var(--gray100);margin-bottom:4px}
+.toc-item{padding:8px 16px;font-size:12px;cursor:pointer;color:var(--gray700);transition:all .2s;border-left:3px solid transparent}
+.toc-item:hover{background:var(--gray50);color:var(--navy)}
+.toc-item.active{border-left-color:var(--red);background:var(--red-light);color:var(--red);font-weight:600}
+.book-main{padding:32px 36px;max-width:700px}
+.book-chapter{display:none}
+.book-chapter.active{display:block}
+.book-chapter h2{font-size:24px;font-weight:800;margin-bottom:18px;padding-bottom:12px;border-bottom:2px solid var(--gray100)}
+.book-chapter p{font-size:14px;color:var(--gray700);line-height:1.75;margin-bottom:12px}
+.book-chapter h3{font-size:16px;font-weight:700;margin:22px 0 9px}
+.book-chapter ul,.book-chapter ol{margin:9px 0 14px 16px}
+.book-chapter li{font-size:14px;color:var(--gray700);line-height:1.65;margin-bottom:5px}
+.info-box{background:var(--blue-light);border-left:4px solid var(--blue);border-radius:var(--radius-sm);padding:12px 16px;margin:16px 0}
+.info-box p{margin:0;color:#1e40af;font-size:13px}
+.warn-box{background:var(--gold-light);border-left:4px solid var(--gold);border-radius:var(--radius-sm);padding:12px 16px;margin:16px 0}
+.warn-box p{margin:0;color:#92400e;font-size:13px}
+.book-nav-btns{display:flex;justify-content:space-between;margin-top:32px;padding-top:18px;border-top:1px solid var(--gray100)}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.fade-in{animation:fadeIn .3s ease both}
+@media(max-width:768px){
+  .hero{padding:92px 0 52px}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .mode-grid{grid-template-columns:1fr}
+  .mode-item{border-right:none;border-bottom:1px solid var(--gray100)}
+  .book-layout{grid-template-columns:1fr}
+  .book-toc{display:none}
+  .book-toc.open{display:block;position:static;height:auto}
+  .book-main{padding:18px}
+  .q-area{padding:0 12px;margin:14px auto}
+  .q-text{font-size:15px}
+}
+</style>
+</head>
+<body>
+
+<nav id="topNav">
+  <div class="container nav-inner">
+    <div class="nav-logo" onclick="goHome()">
+      <span>🚗</span><span><span class="brand-ethio">Ethio</span><span class="brand-biz">Biz</span> UK Driving Theory</span>
+    </div>
+    <div class="nav-right" id="navRight">
+      <span class="nav-lang-badge hidden" id="navLangBadge"></span>
+      <div class="nav-user hidden" id="navUser" onclick="showDashboard()">
+        <div class="nav-avatar" id="navAvatar">?</div>
+        <span class="nav-username hidden" id="navUsername"></span>
+      </div>
+      <button class="btn btn-sm btn-ghost hidden" id="navLogout" onclick="logout()">Sign Out</button>
+    </div>
+  </div>
+</nav>
+
+<!-- LANDING -->
+<div id="screenLanding" class="screen">
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="badge badge-gold">🇬🇧 UK Theory Test</span>
+          <span class="badge badge-green">✓ 730 Questions</span>
+        </div>
+        <h1>Pass Your UK Driving Theory — In <em>Your Language</em></h1>
+        <p class="hero-sub">The only UK driving theory platform built for Amharic & Tigrinya speakers. 730 real questions, personal account, progress tracking.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg" onclick="openPayModal()">Get Access — £20</button>
+          <button class="btn btn-ghost btn-lg" onclick="openAuthModal('login')">Sign In</button>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item">🔒 <strong>Secure PayPal</strong></div>
+          <div class="trust-item">♾️ <strong>Lifetime</strong> access</div>
+          <div class="trust-item">🔐 <strong>Personal</strong> account</div>
+          <div class="trust-item">📱 <strong>All</strong> devices</div>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">730</div><div class="lbl">Questions</div></div>
+        <div class="hero-stat"><div class="num">2</div><div class="lbl">Languages</div></div>
+        <div class="hero-stat"><div class="num">9</div><div class="lbl">Topics</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Features</div>
+        <h2>Everything You Need to Pass</h2>
+        <p>Designed for Amharic & Tigrinya speaking learners in the UK</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon fi-red">📝</div><h3>730 Bilingual Questions</h3><p>Every question in English + your language. Covers all 9 official DVSA theory topics.</p></div>
+        <div class="feature-card"><div class="feature-icon fi-gold">📊</div><h3>Progress Tracking</h3><p>Section-by-section scores saved to your personal account.</p></div>
+        <div class="feature-card"><div class="feature-icon fi-green">🎯</div><h3>Mock Test</h3><p>50-question timed exam simulation. See if you're ready before the real test.</p></div>
+        <div class="feature-card"><div class="feature-icon fi-blue">📖</div><h3>Full Handbook</h3><p>Complete UK driving theory guide — road signs, rules, hazards and more.</p></div>
+        <div class="feature-card"><div class="feature-icon fi-red">🔐</div><h3>Personal &amp; Private</h3><p>Your own account. One language locked to you. Cannot be shared with others.</p></div>
+        <div class="feature-card"><div class="feature-icon fi-gold">♾️</div><h3>Lifetime Access</h3><p>Pay once. No subscription. No expiry. Study on any device, any time.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="how-it-works">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">How It Works</div><h2>Start in Under 2 Minutes</h2></div>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><h3>Pay £20</h3><p>One-time payment via PayPal. Card accepted — no PayPal account needed.</p></div>
+        <div class="step"><div class="step-num">2</div><h3>Create Account</h3><p>Register with your email and password using your access code from the payment.</p></div>
+        <div class="step"><div class="step-num">3</div><h3>Choose Language</h3><p>Select Amharic or Tigrinya. This is permanently linked to your account.</p></div>
+        <div class="step"><div class="step-num">4</div><h3>Pass Your Test</h3><p>Practice 730 questions, track your progress and ace the exam!</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">Reviews</div><h2>Students Who Passed</h2></div>
+      <div class="reviews-grid">
+        <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"I failed twice before. Having questions in Amharic made everything clear. Passed with 48/50!"</p><div class="reviewer"><div class="reviewer-avatar">T</div><div><div class="reviewer-name">Tigist B.</div><div class="reviewer-loc">London</div></div></div></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"The Tigrinya version is excellent. Progress tracking helped me focus on weak areas."</p><div class="reviewer"><div class="reviewer-avatar">H</div><div><div class="reviewer-name">Habtom M.</div><div class="reviewer-loc">Birmingham</div></div></div></div>
+        <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"Best £20 spent. Mock tests were almost identical to the real exam. Highly recommend!"</p><div class="reviewer"><div class="reviewer-avatar">S</div><div><div class="reviewer-name">Selamawit K.</div><div class="reviewer-loc">Manchester</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="pricing">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">Pricing</div><h2>One Price. Everything Included.</h2></div>
+      <div class="pricing-card">
+        <div class="pricing-badge">🏆 Best Value</div>
+        <h3>Lifetime Personal Access</h3>
+        <p class="pricing-sub">Your own account — one language, private &amp; protected</p>
+        <div class="price-display"><span class="currency">£</span><span class="amount">20</span><div class="period">One-time · No subscription · Lifetime</div></div>
+        <ul class="price-features">
+          <li>730 questions (Amharic OR Tigrinya)</li>
+          <li>Personal account — cannot be shared</li>
+          <li>Complete UK theory handbook</li>
+          <li>Mock test &amp; progress tracking</li>
+          <li>Works on all devices</li>
+          <li>Lifetime access — no expiry</li>
+        </ul>
+        <button class="btn btn-primary btn-lg btn-block" onclick="openPayModal()">Get Lifetime Access — £20</button>
+        <div class="guarantee">🔒 Secure PayPal · Card accepted · No PayPal account needed</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p style="font-size:19px;margin-bottom:7px">🚗 <strong>EthioBiz UK Driving Theory</strong></p>
+      <p>Built for the Amharic &amp; Tigrinya community in the UK</p>
+      <p style="margin-top:9px"><a href="mailto:muhabarametouk20@gmail.com">muhabarametouk20@gmail.com</a></p>
+      <p style="margin-top:13px;font-size:11px">Independent study guide · Not affiliated with DVSA or UK Government</p>
+    </div>
+  </footer>
+</div>
+
+<!-- DASHBOARD -->
+<div id="screenDashboard" class="screen hidden">
+  <div class="dash-hero">
+    <div class="container">
+      <div class="dash-top">
+        <div class="dash-welcome" id="dashWelcome">Welcome!</div>
+        <span class="dash-lang-badge" id="dashLangBadge"></span>
+      </div>
+      <div class="stats-row">
+        <div class="stat-box"><div class="sv" id="statAnswered">0</div><div class="sl">Answered</div></div>
+        <div class="stat-box"><div class="sv" id="statCorrect">0</div><div class="sl">Correct</div></div>
+        <div class="stat-box"><div class="sv" id="statScore">0%</div><div class="sl">Score</div></div>
+        <div class="stat-box"><div class="sv" id="statStreak">0</div><div class="sl">Best Streak</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="dash-body">
+    <div class="container">
+      <div class="dash-card fade-in">
+        <div class="dash-card-head"><h3>📚 What would you like to do?</h3></div>
+        <div class="mode-grid">
+          <div class="mode-item" onclick="startPractice('all')"><div class="mode-icon fi-red">📝</div><div class="mode-text"><h4>Practice</h4><p>730 questions · Any topic</p></div></div>
+          <div class="mode-item" onclick="startMockTest()"><div class="mode-icon fi-gold">🎯</div><div class="mode-text"><h4>Mock Test</h4><p>50 questions · Exam mode</p></div></div>
+          <div class="mode-item" onclick="openBook()"><div class="mode-icon fi-green">📖</div><div class="mode-text"><h4>Handbook</h4><p>Full study guide</p></div></div>
+        </div>
+      </div>
+      <div class="dash-card fade-in">
+        <div class="dash-card-head"><h3>📊 Progress by Topic</h3><p>Click a topic to practise it</p></div>
+        <div class="prog-section" id="sectionProgress"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRACTICE -->
+<div id="screenPractice" class="screen hidden">
+  <div class="ptopbar">
+    <div class="container ptb-inner">
+      <button class="btn btn-sm btn-secondary" onclick="showDashboard()">← Back</button>
+      <div class="ptb-info"><span id="ptbMode">Practice</span> · <strong id="ptbQ">1/730</strong></div>
+      <div class="ptb-prog"><div class="ptb-fill" id="ptbFill"></div></div>
+      <div class="ptb-score" id="ptbScore">✓ 0</div>
+    </div>
+  </div>
+  <div class="sec-filter"><div class="sec-pills" id="secPills"></div></div>
+  <div id="resultsWrap" class="results-wrap hidden">
+    <div class="results-card fade-in">
+      <div class="results-circle" id="resultsCircle"><div class="rc-pct" id="rcPct">0%</div><div class="rc-label" id="rcLabel">Score</div></div>
+      <h2 id="resultsTitle">Done!</h2>
+      <p id="resultsMsg"></p>
+      <div class="results-stats">
+        <div class="rs-box"><div class="rv" id="rsCorrect">0</div><div class="rl">Correct</div></div>
+        <div class="rs-box"><div class="rv" id="rsWrong">0</div><div class="rl">Wrong</div></div>
+        <div class="rs-box"><div class="rv" id="rsTotal">0</div><div class="rl">Total</div></div>
+      </div>
+      <div class="results-btns">
+        <button class="btn btn-primary" onclick="restartSession()">Try Again</button>
+        <button class="btn btn-secondary" onclick="showDashboard()">Dashboard</button>
+      </div>
+    </div>
+  </div>
+  <div class="q-area" id="qArea">
+    <div class="q-card fade-in" id="qCard">
+      <div class="q-meta"><span class="q-num" id="qNum">Q1</span><span class="q-sec-tag" id="qSec">Road Signs</span></div>
+      <div class="q-body">
+        <div class="q-text" id="qText"></div>
+        <div class="opts-list" id="optsList"></div>
+        <div class="q-feedback" id="qFeedback"><span class="fb-icon"></span><span class="fb-msg"></span></div>
+      </div>
+      <div class="q-actions">
+        <button class="btn btn-primary" id="btnSubmit" onclick="submitAnswer()">Submit Answer</button>
+        <button class="btn btn-navy hidden" id="btnNext" onclick="nextQuestion()">Next →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BOOK -->
+<div id="screenBook" class="screen hidden">
+  <div class="book-topbar">
+    <div class="container btb-inner">
+      <div class="btb-title">📖 UK Driving Theory Handbook</div>
+      <div style="display:flex;gap:7px">
+        <button class="btn btn-sm btn-secondary" onclick="toggleTOC()">☰ Contents</button>
+        <button class="btn btn-sm btn-secondary" onclick="showDashboard()">← Back</button>
+      </div>
+    </div>
+  </div>
+  <div class="book-layout">
+    <div class="book-toc" id="bookTOC"><div class="toc-head">Contents</div><div id="tocItems"></div></div>
+    <div class="book-main"><div id="bookChapters"></div></div>
+  </div>
+</div>
+
+<!-- AUTH MODAL -->
+<div class="modal-overlay hidden" id="authModal">
+  <div class="modal-box">
+    <div class="auth-tabs">
+      <button class="auth-tab active" id="tabLogin" onclick="switchTab('login')">Sign In</button>
+      <button class="auth-tab" id="tabRegister" onclick="switchTab('register')">Create Account</button>
+    </div>
+    <div id="formLogin">
+      <div class="form-group"><label>Email Address</label><input class="form-input" id="loginEmail" type="email" placeholder="your@email.com"></div>
+      <div class="form-group"><label>Password</label><input class="form-input" id="loginPassword" type="password" placeholder="Your password"></div>
+      <div class="form-error" id="loginError"></div>
+      <button class="btn btn-primary btn-block" onclick="doLogin()" style="margin-top:10px">Sign In</button>
+      <div class="form-hint" style="text-align:center;margin-top:10px">No account? <a href="#" onclick="switchTab('register');return false" style="color:var(--red);font-weight:600">Create one →</a></div>
+    </div>
+    <div id="formRegister" class="hidden">
+      <div class="form-group"><label>Your Name</label><input class="form-input" id="regName" type="text" placeholder="Full name"></div>
+      <div class="form-group"><label>Email Address</label><input class="form-input" id="regEmail" type="email" placeholder="your@email.com"></div>
+      <div class="form-group"><label>Password</label><input class="form-input" id="regPassword" type="password" placeholder="Min 6 characters"></div>
+      <div class="form-group">
+        <label>Access Code <span style="font-weight:400;color:var(--gray500)">(from your payment)</span></label>
+        <input class="form-input" id="regCode" type="text" placeholder="e.g. EB1A2B3C4D">
+        <div class="form-hint">Check your PayPal confirmation email for your access code.</div>
+      </div>
+      <div class="form-error" id="regError"></div>
+      <button class="btn btn-primary btn-block" onclick="doRegister()" style="margin-top:10px">Create Account</button>
+      <div class="form-hint" style="text-align:center;margin-top:10px">Have an account? <a href="#" onclick="switchTab('login');return false" style="color:var(--red);font-weight:600">Sign in →</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- LANG MODAL -->
+<div class="modal-overlay hidden" id="langModal">
+  <div class="modal-box">
+    <h2>Choose Your Language</h2>
+    <p class="modal-subtitle">This will be permanently linked to your account</p>
+    <div class="lang-options">
+      <button class="lang-option-btn" onclick="selectLang('amharic')"><span class="lang-flag">🇪🇹</span><span class="lang-name">English + Amharic</span><span class="lang-native">English + አማርኛ</span></button>
+      <button class="lang-option-btn" onclick="selectLang('tigrinya')"><span class="lang-flag">🇪🇷</span><span class="lang-name">English + Tigrinya</span><span class="lang-native">English + ትግርኛ</span></button>
+    </div>
+    <div class="lang-note">⚠️ Once chosen, your language is fixed and cannot be changed.</div>
+  </div>
+</div>
+
+<!-- PAYMENT MODAL -->
+<div class="modal-overlay hidden" id="payModal">
+  <div class="pay-box">
+    <h2>🎓 Lifetime Access</h2>
+    <p class="pay-sub">One payment — personal account, access forever</p>
+    <div class="pay-price"><span>£</span>20</div>
+    <ul class="pay-features">
+      <li>730 questions (Amharic or Tigrinya)</li>
+      <li>Your own personal account</li>
+      <li>Mock tests &amp; full handbook</li>
+      <li>Progress tracking</li>
+      <li>Lifetime — no expiry</li>
+    </ul>
+    <button class="paypal-btn" onclick="payWithPayPal()">
+      <span style="font-style:italic;font-size:16px">Pay<span style="color:#009cde">Pal</span></span> Pay with PayPal or Card
+    </button>
+    <div class="pay-secure">🔒 Secure · No PayPal account needed · Card accepted</div>
+    <button class="modal-cancel" onclick="closeModal('payModal')">Maybe later</button>
+  </div>
+</div>
+
+<script>
+let QUESTIONS={am:[],ti:[]},dataLoaded=false;
+const SECTIONS=['All Topics','Road Signs & Markings','General Rules of the Road','Rules of the Road','Hazard Awareness','Motorway Rules','Vulnerable Road Users','Vehicle Handling','Vehicle Safety & Maintenance'];
+let currentUser=null;
+let session={questions:[],index:0,correct:0,mode:'practice',section:'all'};
+
+function uKey(e){return 'eb_u_'+e.toLowerCase().replace(/[^a-z0-9]/g,'_')}
+function loadUser(e){try{const d=localStorage.getItem(uKey(e));return d?JSON.parse(d):null}catch(ex){return null}}
+function saveUser(){if(!currentUser)return;localStorage.setItem(uKey(currentUser.email),JSON.stringify(currentUser));localStorage.setItem('eb_sess',currentUser.email)}
+function defStats(){return{answered:0,correct:0,streak:0,bestStreak:0,bySection:{}}}
+function hp(p){let h=0;for(let i=0;i<p.length;i++){h=((h<<5)-h)+p.charCodeAt(i);h|=0}return'h'+Math.abs(h).toString(36)}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  fetch('questions.json').then(r=>r.json()).then(d=>{QUESTIONS=d;dataLoaded=true}).catch(()=>{});
+  buildBook();
+  const params=new URLSearchParams(window.location.search);
+  if(params.get('paid')==='1'){
+    window.history.replaceState({},'',window.location.pathname);
+    const code=params.get('code')||localStorage.getItem('eb_pc')||'';
+    if(code)localStorage.setItem('eb_code_'+code,'paid');
+    localStorage.removeItem('eb_pc');
+    alert('✅ Payment confirmed! Now create your account using your access code: '+code);
+    openAuthModal('register');
+    return;
+  }
+  const sess=localStorage.getItem('eb_sess');
+  if(sess){const u=loadUser(sess);if(u){currentUser=u;onLoggedIn();return;}}
+  showScreen('screenLanding');
+});
+
+function showScreen(id){
+  ['screenLanding','screenDashboard','screenPractice','screenBook'].forEach(s=>document.getElementById(s).classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+  window.scrollTo(0,0);
+}
+function goHome(){currentUser?showDashboard():showScreen('screenLanding')}
+
+function openAuthModal(tab){document.getElementById('authModal').classList.remove('hidden');switchTab(tab||'login')}
+function switchTab(tab){
+  document.getElementById('formLogin').classList.toggle('hidden',tab!=='login');
+  document.getElementById('formRegister').classList.toggle('hidden',tab!=='register');
+  document.getElementById('tabLogin').classList.toggle('active',tab==='login');
+  document.getElementById('tabRegister').classList.toggle('active',tab==='register');
+  document.getElementById('loginError').classList.remove('show');
+  document.getElementById('regError').classList.remove('show');
+}
+function closeModal(id){document.getElementById(id).classList.add('hidden')}
+
+function doLogin(){
+  const email=document.getElementById('loginEmail').value.trim().toLowerCase();
+  const pass=document.getElementById('loginPassword').value;
+  const err=document.getElementById('loginError');
+  if(!email||!pass){err.textContent='Please enter email and password.';err.classList.add('show');return}
+  const u=loadUser(email);
+  if(!u||u.password!==hp(pass)){err.textContent='Incorrect email or password. Please try again.';err.classList.add('show');return}
+  currentUser=u;saveUser();closeModal('authModal');onLoggedIn();
+}
+
+function doRegister(){
+  const name=document.getElementById('regName').value.trim();
+  const email=document.getElementById('regEmail').value.trim().toLowerCase();
+  const pass=document.getElementById('regPassword').value;
+  const code=document.getElementById('regCode').value.trim().toUpperCase();
+  const err=document.getElementById('regError');
+  if(!name){err.textContent='Please enter your name.';err.classList.add('show');return}
+  if(!email||!email.includes('@')){err.textContent='Please enter a valid email address.';err.classList.add('show');return}
+  if(pass.length<6){err.textContent='Password must be at least 6 characters.';err.classList.add('show');return}
+  if(!code){err.textContent='Please enter your access code from the payment email.';err.classList.add('show');return}
+  const codeStatus=localStorage.getItem('eb_code_'+code);
+  if(codeStatus!=='paid'){err.textContent='Invalid or already used access code. Check your PayPal email.';err.classList.add('show');return}
+  if(loadUser(email)){err.textContent='This email is already registered. Please sign in.';err.classList.add('show');return}
+  localStorage.setItem('eb_code_'+code,'used:'+email);
+  currentUser={name,email,password:hp(pass),lang:null,stats:defStats(),code};
+  saveUser();closeModal('authModal');
+  document.getElementById('langModal').classList.remove('hidden');
+}
+
+function selectLang(lang){
+  if(!currentUser)return;
+  currentUser.lang=lang;saveUser();
+  closeModal('langModal');updateNav();showDashboard();
+}
+
+function onLoggedIn(){updateNav();if(!currentUser.lang){document.getElementById('langModal').classList.remove('hidden');}else{showDashboard();}}
+
+function updateNav(){
+  if(!currentUser)return;
+  document.getElementById('navAvatar').textContent=currentUser.name.charAt(0).toUpperCase();
+  document.getElementById('navUsername').textContent=currentUser.name.split(' ')[0];
+  document.getElementById('navUser').classList.remove('hidden');
+  document.getElementById('navLogout').classList.remove('hidden');
+  if(currentUser.lang){
+    const b=document.getElementById('navLangBadge');
+    b.textContent=currentUser.lang==='amharic'?'🇪🇹 Amharic':'🇪🇷 Tigrinya';
+    b.classList.remove('hidden');
+  }
+}
+
+function logout(){
+  localStorage.removeItem('eb_sess');currentUser=null;
+  ['navUser','navLogout','navLangBadge'].forEach(id=>document.getElementById(id).classList.add('hidden'));
+  showScreen('screenLanding');
+}
+
+function openPayModal(){document.getElementById('payModal').classList.remove('hidden')}
+
+function payWithPayPal(){
+  const code='EB'+Date.now().toString(36).toUpperCase().slice(-8);
+  localStorage.setItem('eb_code_'+code,'paid');
+  localStorage.setItem('eb_pc',code);
+  const ret=window.location.href.split('?')[0]+'?paid=1&code='+code;
+  const cancel=window.location.href.split('?')[0];
+  window.location.href='https://www.paypal.com/cgi-bin/webscr?cmd=_xclick'
+    +'&business=muhabarametouk20@gmail.com'
+    +'&item_name=EthioBiz%20UK%20Driving%20Theory%20-%20Lifetime%20Access'
+    +'&amount=20.00&currency_code=GBP'
+    +'&return='+encodeURIComponent(ret)
+    +'&cancel_return='+encodeURIComponent(cancel);
+}
+
+function showDashboard(){
+  if(!currentUser){openAuthModal('login');return}
+  showScreen('screenDashboard');updateNav();
+  const s=currentUser.stats;
+  document.getElementById('dashWelcome').textContent='Welcome back, '+currentUser.name.split(' ')[0]+'! 👋';
+  document.getElementById('dashLangBadge').textContent=currentUser.lang==='amharic'?'🇪🇹 English + Amharic':'🇪🇷 English + Tigrinya';
+  document.getElementById('statAnswered').textContent=s.answered||0;
+  document.getElementById('statCorrect').textContent=s.correct||0;
+  const pct=s.answered>0?Math.round(s.correct/s.answered*100):0;
+  document.getElementById('statScore').textContent=pct+'%';
+  document.getElementById('statStreak').textContent=s.bestStreak||0;
+  const qs=getQs();
+  document.getElementById('sectionProgress').innerHTML=SECTIONS.slice(1).map(sec=>{
+    const sq=qs.filter(q=>q.sec===sec),ss=(s.bySection&&s.bySection[sec])||{answered:0,correct:0};
+    const pd=sq.length>0?Math.min(100,Math.round(ss.answered/sq.length*100)):0;
+    const pr=ss.answered>0?Math.round(ss.correct/ss.answered*100):0;
+    return`<div class="prog-row" onclick="startPractice('${sec}')">
+      <div class="prog-label">${sec}</div>
+      <div class="prog-bar-wrap"><div class="prog-bar-fill" style="width:${pd}%"></div></div>
+      <div class="prog-pct">${ss.answered>0?pr+'%':'–'}</div>
+    </div>`;
+  }).join('');
+}
+
+function getQs(){if(!dataLoaded)return[];return currentUser&&currentUser.lang==='tigrinya'?(QUESTIONS.ti||[]):(QUESTIONS.am||[])}
+
+function startPractice(section){
+  if(!currentUser){openAuthModal('login');return}
+  const all=getQs();if(!all.length){alert('Questions loading, please wait…');return}
+  let pool=section==='all'?[...all]:all.filter(q=>q.sec===section);
+  pool.sort(()=>Math.random()-.5);
+  session={questions:pool,index:0,correct:0,mode:'practice',section};
+  showScreen('screenPractice');buildPills(false);
+  document.getElementById('resultsWrap').classList.add('hidden');
+  document.getElementById('qArea').classList.remove('hidden');
+  document.getElementById('ptbMode').textContent='Practice';
+  renderQ();
+}
+
+function startMockTest(){
+  if(!currentUser){openAuthModal('login');return}
+  const all=getQs();if(!all.length){alert('Questions loading, please wait…');return}
+  const pool=[...all].sort(()=>Math.random()-.5).slice(0,50);
+  session={questions:pool,index:0,correct:0,mode:'mock',section:'all'};
+  showScreen('screenPractice');buildPills(true);
+  document.getElementById('resultsWrap').classList.add('hidden');
+  document.getElementById('qArea').classList.remove('hidden');
+  document.getElementById('ptbMode').textContent='🎯 Mock Test';
+  renderQ();
+}
+
+function buildPills(mock){
+  const el=document.getElementById('secPills');
+  if(mock){el.innerHTML='<span style="padding:5px 12px;font-size:12px;color:var(--gray500)">50-Question Mock Exam — All sections</span>';return}
+  el.innerHTML=SECTIONS.map(s=>{
+    const active=(s==='All Topics'&&session.section==='all')||s===session.section;
+    return`<button class="sec-pill ${active?'active':''}" onclick="switchSec('${s}')">${s}</button>`;
+  }).join('');
+}
+function switchSec(s){s==='All Topics'?startPractice('all'):startPractice(s)}
+
+function renderQ(){
+  if(session.index>=session.questions.length){showResults();return}
+  const q=session.questions[session.index],total=session.questions.length;
+  document.getElementById('ptbQ').textContent=`${session.index+1}/${total}`;
+  document.getElementById('ptbFill').style.width=(session.index/total*100)+'%';
+  document.getElementById('ptbScore').textContent=`✓ ${session.correct}`;
+  document.getElementById('qNum').textContent=`Q${session.index+1} of ${total}`;
+  document.getElementById('qSec').textContent=q.sec||'General';
+  document.getElementById('qText').innerHTML=q.q||'';
+  document.getElementById('optsList').innerHTML=['A','B','C','D'].map((l,i)=>{
+    const t=q[['a','b','c','d'][i]];if(!t)return'';
+    return`<button class="opt" data-val="${l}" onclick="selOpt(this)"><span class="opt-letter">${l}</span><span class="opt-text">${t}</span></button>`;
+  }).join('');
+  const fb=document.getElementById('qFeedback');fb.className='q-feedback';
+  document.getElementById('btnSubmit').classList.remove('hidden');
+  document.getElementById('btnNext').classList.add('hidden');
+}
+
+function selOpt(el){document.querySelectorAll('.opt').forEach(o=>o.classList.remove('selected'));el.classList.add('selected')}
+
+function submitAnswer(){
+  const sel=document.querySelector('.opt.selected');
+  if(!sel){alert('Please choose an answer');return}
+  const q=session.questions[session.index];
+  const correct=(q.ans||'').toUpperCase();
+  const isRight=sel.dataset.val===correct;
+  document.querySelectorAll('.opt').forEach(o=>{
+    o.classList.add('disabled');o.style.pointerEvents='none';
+    if(o.dataset.val===correct)o.classList.add('correct');
+    else if(o===sel&&!isRight)o.classList.add('wrong');
+  });
+  const fb=document.getElementById('qFeedback');fb.classList.add('show');
+  if(isRight){
+    fb.classList.add('fb-correct');
+    fb.innerHTML='<span class="fb-icon">✅</span><span class="fb-msg">Correct! Well done.</span>';
+    session.correct++;
+    currentUser.stats.streak=(currentUser.stats.streak||0)+1;
+    if(currentUser.stats.streak>(currentUser.stats.bestStreak||0))currentUser.stats.bestStreak=currentUser.stats.streak;
+  }else{
+    fb.classList.add('fb-wrong');
+    fb.innerHTML=`<span class="fb-icon">❌</span><span class="fb-msg">Incorrect. Correct answer is <strong>${correct}</strong>.</span>`;
+    currentUser.stats.streak=0;
+  }
+  currentUser.stats.answered=(currentUser.stats.answered||0)+1;
+  currentUser.stats.correct=(currentUser.stats.correct||0)+(isRight?1:0);
+  if(!currentUser.stats.bySection)currentUser.stats.bySection={};
+  const sec=q.sec||'General';
+  if(!currentUser.stats.bySection[sec])currentUser.stats.bySection[sec]={answered:0,correct:0};
+  currentUser.stats.bySection[sec].answered++;
+  if(isRight)currentUser.stats.bySection[sec].correct++;
+  saveUser();
+  document.getElementById('ptbScore').textContent=`✓ ${session.correct}`;
+  document.getElementById('btnSubmit').classList.add('hidden');
+  document.getElementById('btnNext').classList.remove('hidden');
+  setTimeout(()=>{if(!document.getElementById('btnNext').classList.contains('hidden'))nextQuestion()},1800);
+}
+
+function nextQuestion(){
+  session.index++;
+  const c=document.getElementById('qCard');c.classList.remove('fade-in');void c.offsetWidth;c.classList.add('fade-in');
+  renderQ();
+}
+
+function showResults(){
+  const total=session.questions.length,correct=session.correct,pct=Math.round(correct/total*100),passed=pct>=86;
+  document.getElementById('qArea').classList.add('hidden');
+  document.getElementById('resultsWrap').classList.remove('hidden');
+  document.getElementById('rcPct').textContent=pct+'%';
+  document.getElementById('rcLabel').textContent=passed?'PASS ✓':'FAIL ✗';
+  document.getElementById('resultsCircle').className='results-circle '+(passed?'rc-pass':'rc-fail');
+  document.getElementById('resultsTitle').textContent=passed?'🎉 Congratulations!':'📚 Keep Studying!';
+  document.getElementById('resultsMsg').textContent=passed
+    ?`You scored ${pct}% — above the 86% pass mark. You're ready!`
+    :`You scored ${pct}%. You need 86% to pass. Keep practising!`;
+  document.getElementById('rsCorrect').textContent=correct;
+  document.getElementById('rsWrong').textContent=total-correct;
+  document.getElementById('rsTotal').textContent=total;
+}
+
+function restartSession(){session.mode==='mock'?startMockTest():startPractice(session.section)}
+
+const CHAPTERS=[
+  {id:'intro',title:'1. Introduction',content:`<h2>Welcome to Your Driving Journey</h2><p>This handbook covers everything you need to know to pass your UK driving theory test. The multiple-choice section requires 43 out of 50 (86%) to pass.</p><div class="info-box"><p><strong>📌 How to use this platform:</strong> Practice questions by topic, take mock tests, and track your progress on the dashboard.</p></div><h3>About the UK Theory Test</h3><ul><li>50 multiple-choice questions (45 minutes)</li><li>You need 43/50 (86%) to pass</li><li>Plus a hazard perception test (14 video clips)</li><li>Cost: £23 at an official DVSA test centre</li></ul>`},
+  {id:'signs',title:'2. Road Signs & Markings',content:`<h2>Road Signs &amp; Markings</h2><h3>Sign Shapes</h3><ul><li><strong>Circular red border</strong> — Prohibitions: no entry, speed limits</li><li><strong>Triangular red border</strong> — Hazard warnings ahead</li><li><strong>Circular blue</strong> — Positive instructions: turn left, keep right</li><li><strong>Rectangular green/white</strong> — Directions &amp; information</li></ul><div class="warn-box"><p><strong>⚠️ Key rule:</strong> Red circles = prohibition. Blue circles = instruction. Triangles = warning.</p></div><h3>Road Markings</h3><ul><li><strong>Single white line</strong> — Advisory; do not cross unless safe</li><li><strong>Double white (solid nearest)</strong> — Do not cross</li><li><strong>Single yellow</strong> — No parking at certain times (check signs)</li><li><strong>Double yellow</strong> — No parking at any time</li><li><strong>Zigzag lines</strong> — Near crossings: no parking, no overtaking</li></ul>`},
+  {id:'rules',title:'3. Rules of the Road',content:`<h2>Rules of the Road</h2><h3>Speed Limits</h3><ul><li><strong>Built-up areas (street lights)</strong>: 30 mph</li><li><strong>Single carriageways</strong>: 60 mph</li><li><strong>Dual carriageways</strong>: 70 mph</li><li><strong>Motorways</strong>: 70 mph</li></ul><div class="info-box"><p><strong>📌 Note:</strong> Speed limits are the maximum allowed, not a target. Always drive to the conditions.</p></div><h3>Traffic Lights</h3><ul><li><strong>Red</strong> — Stop at the line</li><li><strong>Red + Amber</strong> — Prepare to go (do not move yet)</li><li><strong>Green</strong> — Go if it is safe</li><li><strong>Amber</strong> — Stop unless it is unsafe to do so</li></ul><h3>Roundabouts</h3><ul><li>Give way to traffic coming from the right</li><li>Left lane for exits up to and including straight on (12 o'clock)</li><li>Right lane for turning right or going past 12 o'clock</li></ul>`},
+  {id:'hazard',title:'4. Hazard Awareness',content:`<h2>Hazard Awareness</h2><h3>Overall Stopping Distances (Dry Road)</h3><ul><li><strong>20 mph</strong> — 12 metres (3 car lengths)</li><li><strong>30 mph</strong> — 23 metres (6 car lengths)</li><li><strong>50 mph</strong> — 53 metres (13 car lengths)</li><li><strong>70 mph</strong> — 96 metres (24 car lengths)</li></ul><div class="warn-box"><p><strong>⚠️ Wet conditions:</strong> Double your stopping distance. Ice: up to 10× longer.</p></div><h3>The Two-Second Rule</h3><p>Pick a fixed point ahead. When the car in front passes it, count: "only a fool breaks the two-second rule." You should not pass the same point before you finish saying it. Double the gap in wet weather.</p>`},
+  {id:'motorway',title:'5. Motorway Rules',content:`<h2>Motorway Rules</h2><h3>Lane Discipline</h3><ul><li>Always drive in the left lane unless overtaking</li><li>Return to the left lane after overtaking</li><li>Red X above a lane = lane is closed. Driving in it is an offence.</li></ul><div class="info-box"><p><strong>📌 Smart motorways:</strong> Emergency Refuge Areas (ERAs) are orange-surfaced bays used if you break down. Variable speed limits shown on overhead signs are mandatory.</p></div><h3>Breakdowns</h3><ul><li>Move to hard shoulder or ERA</li><li>Switch on hazard lights</li><li>Exit vehicle on the left side, go behind the barrier</li><li>Call for help using the roadside emergency phone</li></ul>`},
+  {id:'vulnerable',title:'6. Vulnerable Users',content:`<h2>Vulnerable Road Users</h2><h3>Pedestrians</h3><ul><li>Always give way at pedestrian crossings</li><li>Be extra careful near schools and bus stops</li><li>Watch for people stepping out from between parked vehicles</li></ul><h3>Cyclists</h3><ul><li>Give at least 1.5 metres space when overtaking</li><li>Check mirrors and blind spots at junctions</li><li>Check before opening your door ("Dutch reach")</li></ul><h3>Horse Riders</h3><ul><li>Pass wide (at least 2 metres) and slow (under 10 mph)</li><li>Never use the horn or rev the engine near horses</li><li>Be patient — wait for a safe place before passing</li></ul>`},
+  {id:'vehicle',title:'7. Vehicle Safety',content:`<h2>Vehicle Safety &amp; Maintenance</h2><h3>Pre-Drive Checks (POWDER)</h3><ul><li><strong>P</strong>etrol / fuel level</li><li><strong>O</strong>il (check when engine is cold)</li><li><strong>W</strong>ater / coolant level</li><li><strong>D</strong>amage — visible damage or flat tyres</li><li><strong>E</strong>lectrics — lights, indicators, horn</li><li><strong>R</strong>ubber — tyre tread and pressure</li></ul><div class="warn-box"><p><strong>⚠️ Legal minimum tread depth: 1.6mm</strong> across the central ¾ of the tyre, around the full circumference. Penalty: up to £2,500 and 3 penalty points per tyre.</p></div><h3>Tyre Pressure</h3><ul><li>Always check when tyres are <strong>cold</strong></li><li>Under-inflated: more fuel used, longer braking</li><li>Over-inflated: less grip, uneven wear</li></ul>`}
+];
+
+function buildBook(){
+  document.getElementById('tocItems').innerHTML=CHAPTERS.map((c,i)=>`<div class="toc-item ${i===0?'active':''}" id="toc-${c.id}" onclick="showCh(${i})">${c.title}</div>`).join('');
+  document.getElementById('bookChapters').innerHTML=CHAPTERS.map((c,i)=>`<div class="book-chapter ${i===0?'active':''}" id="ch-${c.id}">${c.content}<div class="book-nav-btns">${i>0?`<button class="btn btn-secondary btn-sm" onclick="showCh(${i-1})">← Prev</button>`:'<div></div>'}${i<CHAPTERS.length-1?`<button class="btn btn-primary btn-sm" onclick="showCh(${i+1})">Next →</button>`:'<div></div>'}</div></div>`).join('');
+}
+
+function openBook(){if(!currentUser){openAuthModal('login');return}showScreen('screenBook')}
+function showCh(i){document.querySelectorAll('.book-chapter').forEach((e,j)=>e.classList.toggle('active',j===i));document.querySelectorAll('.toc-item').forEach((e,j)=>e.classList.toggle('active',j===i));document.querySelector('.book-main').scrollTop=0}
+function toggleTOC(){document.getElementById('bookTOC').classList.toggle('open')}
+</script>
+</body>
+</html>
